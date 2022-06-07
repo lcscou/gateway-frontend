@@ -1,0 +1,10 @@
+.main{
+    @apply bg-primary-100 text-dark rounded-md  px-5 mb-2;
+}
+.header{
+    @apply flex hover:opacity-75 text-lg  items-center py-5 font-medium hover:text-primary-900 justify-between;
+}
+
+.content{
+    @apply py-5;
+}

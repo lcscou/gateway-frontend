@@ -1,0 +1,17 @@
+.header{
+    @apply border-b-2;
+}
+.nav {
+    @apply py-5  flex justify-between items-center mx-auto;
+}
+
+.menu {
+    @apply list-none;
+}
+.menu li{
+    @apply  pl-10 font-semibold text-dark hidden sm:inline;
+}
+
+.offsetMenu{
+    @apply w-2/4 p-5 top-0 right-0 h-screen transition absolute bg-slate-400;
+}

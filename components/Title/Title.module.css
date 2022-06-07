@@ -1,0 +1,12 @@
+.main{
+    @apply flex py-5;
+}
+
+.main h2{
+    @apply text-4xl font-semibold py-5;
+}
+
+.main h2::after{
+    @apply content-[''] border-primary-900  border-b-4 block mt-3;  
+  
+}

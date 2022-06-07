@@ -1,0 +1,19 @@
+.main {
+    @apply bg-dark min-h-[calc(100vh-96px)] flex items-center justify-center relative;
+
+}
+
+.wrapper {
+    @apply text-white;
+}
+
+.title{
+    @apply text-5xl max-w-xl leading-snug;
+}
+
+.flow{
+    @apply flex flex-col gap-5 absolute bottom-10 w-full items-center;
+}
+.flow button{
+    @apply border w-7 h-7 rounded-full
+}
