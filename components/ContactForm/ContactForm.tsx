@@ -12,7 +12,7 @@ const ContactForm: React.FC = () => {
     const [FormErr, setFormErr] = useState(false)
 
 
-    const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleSubmit = (e: MouseEvent<HTMLInputElement, globalThis.MouseEvent>) => {
         setSubmitLabel('Sending...')
         e.preventDefault()
         console.log('Sending')
@@ -55,8 +55,8 @@ const ContactForm: React.FC = () => {
                 <input onChange={(e) => { setEmail(e.target.value) }} type='email' name="email" placeholder='Email' id="email" />
                 <input onChange={(e) => { setCompany(e.target.value) }} type='text' name="company" placeholder='Company' id="company" />
                 <select onChange={(e) => { setBudget(e.target.value) }} name="budget" placeholder='Company' id="budget">
-                    <option value="+10000">$50,000> $300,000</option>
-                    <option value="+10000">$300,000> $750,000</option>
+                    <option value="+10000">$50,000{'>'} $300,000</option>
+                    <option value="+10000">$300,000{'>'} $750,000</option>
                     <option value="+10000">$750,000+</option>
                 </select >
                 <textarea onChange={(e) => { setMessage(e.target.value) }} placeholder="Tell us about your project" name="message" id="message" cols="30" rows="7"></textarea>
