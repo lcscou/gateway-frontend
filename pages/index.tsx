@@ -14,6 +14,8 @@ import ilustration from '../public/img/ilustration-set-your-goals.png'
 import step2 from '../public/img/step2.png'
 import step3 from '../public/img/step3.png'
 import step4 from '../public/img/step4.png'
+import Link from 'next/link'
+import ContactForm from '../components/ContactForm/ContactForm'
 
 const Home: NextPage = () => {
   return (<>
@@ -22,8 +24,9 @@ const Home: NextPage = () => {
 
       <Hero
         title="Get high talented developers team to get your project moving"
+        target='#stepes'
       />
-      <section className='py-20'>
+      <section id='stepes' className='py-20'>
 
         <Step
           number={1}
@@ -161,9 +164,9 @@ const Home: NextPage = () => {
       </section>
 
 
-      <section className="bg-primary-900" >
-        <div className='grid grid-cols-2'>
-          <div className="p-20">
+      <section id='contact' className="bg-primary-900" >
+        <div className='grid md:grid-cols-2'>
+          <div className="md:p-20 px-5">
             <Title title="Book a call" align='start' variant='white' />
             <p className='text-[#C1DAED]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam bibendum turpis eu suscipit viverra. Nunc rhoncus justo nec turpis sodales, vel venenatis purus mollis. Mauris et fermentum urna.</p>
             <ul className='text-white mt-10'>
@@ -172,20 +175,8 @@ const Home: NextPage = () => {
             </ul>
           </div>
 
-          <div className='p-20'>
-            <form action="">
-              <input type="text" name="name" placeholder='Name' id="name" />
-              <input type='email' name="email" placeholder='Email' id="email" />
-              <input type='text' name="Company" placeholder='Company' id="company" />
-              <select type='text' name="Company" placeholder='Company' id="company">
-                <option value="+10000">$50,000> $300,000</option>
-                <option value="+10000">$300,000> $750,000</option>
-                <option value="+10000">$750,000+</option>
-              </select >
-              <textarea name="message" id="message" cols="30" rows="7"></textarea>
-              <input type='submit' value="Enviar" />
-            </form>
-          </div>
+          <ContactForm /> 
+
         </div>
       </section>
     </main>
@@ -193,10 +184,10 @@ const Home: NextPage = () => {
     <footer className='bg-[#507795]'>
       <div className="container py-10">
         <ul className='text-white'>
-          <li className='inline mr-4'>About Us</li>
-          <li className='inline mr-4'>Terms and Conditions</li>
-          <li className='inline mr-4'>Privacy</li>
-          <li className='inline mr-4'>Contact</li>
+          <li className='inline mr-4 opacity-80 hover:opacity-100'><Link href={"https://www.appmasters.io/"}>About Us</Link></li>
+          <li className='inline mr-4 opacity-80 hover:opacity-100'><Link href={"#about-us"}>Terms and Conditions</Link></li>
+          <li className='inline mr-4 opacity-80 hover:opacity-100'><Link href={"#about-us"}>Privacy</Link></li>
+          <li className='inline mr-4 opacity-80 hover:opacity-100'><Link href={"#contact"}>Contact</Link></li>
         </ul>
       </div>
     </footer>

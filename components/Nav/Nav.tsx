@@ -16,28 +16,27 @@ const Nav: React.FC = () => {
 
     return (
         <header className={s.header}>
-<div className="container">
-
-            <nav className={cn(s.nav)}>
-                <Img src={logo}></Img>
-                <ul className={s.menu}>
-                    <li><Link href="https://appmasters.io">About Us</Link> </li>
-                    <li><Link href="/program">The Program</Link></li>
-                    <li><Link href="/program">FAQ</Link></li>
-                    <li><Link href="/program"><Button>Book a call</Button></Link></li>
-                </ul>
+            <div className="container">
+                <nav className={cn(s.nav)}>
+                    <Img src={logo}></Img>
+                    <ul className={s.menu}>
+                        <li><Link href="https://appmasters.io">About Us</Link> </li>
+                        <li><Link href="/program">The Program</Link></li>
+                        <li><Link href="/program">FAQ</Link></li>
+                        <li><Link href="/program"><Button>Book a call</Button></Link></li>
+                    </ul>
                     <button className="visible sm:hidden" onClick={() => { setIsOpen(true) }}>
                         <FontAwesomeIcon icon={faBars} size="2x" className="px-4" />
                     </button>
+                </nav>
 
-            </nav>
-
-            <aside className={cn(s.offsetMenu, isOpen ?  'translate-x-0' :'translate-x-full')}>
-                <button onClick={() => { setIsOpen(false) }}>
-                    <FontAwesomeIcon icon={faTimes} size="2x" className="px-4" />
-                </button>
-            </aside>
-</div>
+                <aside className={cn(s.offsetMenu, isOpen ? 'translate-x-0' : 'translate-x-full')}>
+                    <button onClick={() => { setIsOpen(false) }}>
+                        <FontAwesomeIcon icon={faTimes} size="2x" className="px-4" />
+                    </button>
+                </aside>
+                
+            </div>
         </header>
 
     )
