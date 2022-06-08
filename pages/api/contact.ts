@@ -16,20 +16,18 @@ export default async function sendEmail(
     host: process.env.HOST,
     port: 587,
     auth: {
-      user: process.env.USERMAIL, 
+      user: process.env.USERMAIL,
       pass: process.env.PASSWORD,
     },
   });
 
-console.log(req.body)
+  console.log(req.body)
   let info = await transporter.sendMail({
     from: `"Gateway form" <${req.body.email}>`,
     to: "<contact@gateway.com>",
     subject: "Você recebeu um contato do Gateway",
     text: req.body.message,
     html: `Message from: ${req.body.name}<br>Email: ${req.body.email}<br><br>${req.body.message}`,
-  }).then(()=>res.send("Email Sent"))
-  .catch((err)=>{
-    console.log(err)
-    res.send("Something went wrong")})
+  }).then((response: Data) => res.send(response))
+    .catch((err: Data) => { res.send(err) })
 }

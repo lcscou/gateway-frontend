@@ -170,7 +170,7 @@ const Home: NextPage = () => {
             <Title title="Book a call" align='start' variant='white' />
             <p className='text-[#C1DAED]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam bibendum turpis eu suscipit viverra. Nunc rhoncus justo nec turpis sodales, vel venenatis purus mollis. Mauris et fermentum urna.</p>
             <ul className='text-white mt-10'>
-              <li className='mt-2'><FontAwesomeIcon icon={faArrowRight} />&nbsp; You'll be talking to product and tech expert</li>
+              <li className='mt-2'><FontAwesomeIcon icon={faArrowRight} />&nbsp; You&apos;ll be talking to product and tech expert</li>
               <li className='mt-2'><FontAwesomeIcon icon={faArrowRight} />&nbsp; We will respond to you within 24 hours</li>
             </ul>
           </div>

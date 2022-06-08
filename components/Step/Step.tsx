@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import s from './Step.module.css'
-import Image, { ImageProps } from 'next/image';
+import Image, { ImageProps, StaticImageData } from 'next/image';
 import cn from 'classnames';
 import ilustration from '../../public/img/ilustration-set-your-goals.png'
 import Collapse from '../Collapse/Collapse';
@@ -12,7 +12,7 @@ interface StepProps {
     number: number;
     description: string;
     children: ReactNode | ReactNode[];
-    image: string
+    image: string | StaticImageData
 
 }
 
