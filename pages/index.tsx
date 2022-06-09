@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 
       <Hero
         title="Get high talented developers team to get your project moving"
-        target='#stepes'
+        target='stepes'
       />
       <section id='stepes' className='py-20'>
 
